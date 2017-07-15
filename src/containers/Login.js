@@ -7,7 +7,7 @@ import Title from '../components/layout/Title'
 import Row from '../components/layout/Row'
 import Jumbotron from '../components/layout/Jumbotron'
 import LoginForm from './LoginForm'
-import ErrorMessage from '../components/form/ErrorMessage'
+import Message from '../components/form/Message'
 import If from '../components/operators/If'
 
 class Login extends Component{
@@ -27,21 +27,19 @@ class Login extends Component{
 
     render() {
             return(
-                <div>
-                    <Jumbotron>
+                    <div>
                         <Title>Login</Title>
                         <Row>
                             <LoginForm onSubmit={this.handleSubmit.bind(this)} />
                         </Row>    
                         <If test={this.props.error}>
                             <Row>
-                                <ErrorMessage>
+                                <Message>
                                     {this.props.error}
-                                </ErrorMessage>
+                                </Message>
                             </Row>    
-                        </If> 
-                    </Jumbotron>      
-                </div>    
+                        </If>      
+                    </div>    
             )
     }
 }

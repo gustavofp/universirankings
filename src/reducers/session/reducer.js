@@ -1,6 +1,8 @@
 const userKey = 'universiRankings_user'
+const localStorageData = JSON.parse(localStorage.getItem(userKey)) || ''
 const INITIAL_STATE = {
-    user: JSON.parse(localStorage.getItem(userKey)),
+    user: localStorageData.user,
+    token: localStorageData.token,
     validToken: false
 }
 

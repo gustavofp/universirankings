@@ -6,6 +6,7 @@ import Form from '../components/form/Form'
 import FormGroup from '../components/form/FormGroup'
 import Input from '../components/form/Input'
 import Label from '../components/form/Label'
+import Button from '../components/layout/Button'
 
 class LoginForm extends Component {
 
@@ -22,7 +23,7 @@ class LoginForm extends Component {
                              <Field name="password" component={Input} inputName="Password" type="password" placeholder="Insira a senha cadastrada" />   
                         </FormGroup> 
                         <FormGroup>
-                             <button type="submit" className="btn btn-success pull-right">Entrar</button>   
+                             <Button type="submit">Entrar</Button>   
                         </FormGroup>
                      </Form>    
         )

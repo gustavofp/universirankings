@@ -1,5 +1,10 @@
 import React from 'react'
+import styled from 'styled-components'
+
+const Button = styled.button`
+    background-color: green
+`
 
 export default props => (
-    <button type={props.type} className={`btn btn-${props.className}`} onClick={props.onClick}>{props.text}</button>
+    <Button type={props.type} onClick={props.onClick}>{props.text}</Button>
 )
